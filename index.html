@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MY FIRST WEBPAGE</title>
+</head>
+<body style="background-color: lightblue; max-width: 800px; margin: auto; padding: 20px;">
+	<header>
+		<h1>MY FIRST WEBPAGE</h1>
+	</header>
+<main>
+    <h2><strong><u>About ME</u></strong></h2>
+    <p><b>My name is Sharyal Masih.</b></p>
+    <p><i>I am student of cybersecurity.</i></p>
+    <p><u>My section is BSCB 1B.</u></p>
+    <p><strong>My class is ICT.</strong></p>
+</main>
+<img src="https://sharyalmasih-cyber.github.io/My-Webpage/Myphoto.jpg.jpeg" alt="My Photo" width="150" height="200" style="object-fit: cover; border-radius: 10px;">
+<h2><strong><u>My Marks</u></strong></h2>
+<table>
+	<tr>
+		<th>Subject</th>
+		<th>Total Marks</th>
+		<th>Obtained Marks</th>
+	</tr>
+	<tr>
+		<td>ICT</td>
+		<td>100</td>
+		<td>85</td>
+	</tr>
+	<tr>
+		<td>English</td>
+		<td>100</td>
+		<td>78</td>
+	</tr>
+	<tr>
+		<td>Math</td>
+		<td>100</td>
+		<td>90</td>
+	</tr>
+</table> 
+<h2><strong><u>Favourite Website</u></strong></h2>
+<a href="MY website.html" target="_blank">Visit My Website</a>
+<h2><strong><u>Feedback</u></strong></h2>
+<p>Select your favourite subject:</p>
+<select id="subject">
+	<option>ICT</option>
+	<option>English</option>
+	<option>Math</option>
+</select>
+<br><br>
+<textarea   id="feedback" rows="4" cols="30" placeholder="write your feedback here ..."></textarea>
+<br>
+<button onclick="saveFeedback()" style="font-size: 20px; padding: 12px 30px; background-color: lightgreen; border-radius: 8px;"></button>
+<p id="saved"></p>
+<script>
+	function saveFeedback() {
+		let f = document.getElementById("feedback").value;
+		let s = document.getElementById("subject").value;
+		localStorage.setItem("myfeedback",s + " - " + f);
+		document.getElementById("saved").innerText = "Saved! " + s + " - " + f;
+	}
+</script>
+<p>&copy; 2026 MY WEbsite | Created By <strong><i>Sharyal Masih</i></strong></p>  
